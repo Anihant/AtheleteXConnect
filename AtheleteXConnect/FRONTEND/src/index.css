@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Outfit', sans-serif;
+}
+
+@layer components {
+  .form-input {
+    @apply my-1 mr-2 shadow-sm placeholder:text-gray-900 border border-gray-400 text-gray-900 text-sm rounded-lg w-full p-2.5 ;
+  }
+
+  .form-select {
+    @apply border border-gray-500 text-gray-900 text-sm rounded-lg block w-full p-2.5 ;
+  }
+
+  .form-label {
+    @apply mt-2 block text-base font-medium text-gray-900 ;
+  }
+  
+  .form-error {
+    @apply text-red-500 text-sm mb-2 ;
+  }
+
+  .player-details{
+    @apply my-4 mx-2 p-2 border border-gray-200 rounded-lg shadow pt-0 bg-gray-100
+  }
+
+  .submit-button{
+    @apply text-base text-white bg-gray-800 border border-gray-300 focus:outline-none hover:text-black hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg px-5 py-2.5 mt-4
+  }
+
+  .header-links{
+    @apply m-3 text-gray-900 text-xl md:text-2xl hover:text-gray-800 flex justify-center items-center gap-3 
+  }
+  .navlink{
+    @apply hover:border-gray-100 border-b-2 border-transparent text-slate-100
+  }
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #000;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
